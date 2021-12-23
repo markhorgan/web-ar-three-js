@@ -1,0 +1,17 @@
+{
+  "name": "web-vr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "three": "^0.135.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.0.1"
+  }
+}

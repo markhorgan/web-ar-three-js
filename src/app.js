@@ -89,7 +89,6 @@ class App {
     session.addEventListener('end', () => {
       this.hitTestSourceRequested = false;
       this.hitTestSource = null;
-      this.referenceSpace = null;
     });
     const referenceSpace = await session.requestReferenceSpace('viewer');
     this.hitTestSource = await session.requestHitTestSource({ space: referenceSpace, entityTypes: ['plane'] });

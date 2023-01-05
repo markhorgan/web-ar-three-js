@@ -1,8 +1,15 @@
-import { Mesh, HemisphereLight, PerspectiveCamera, Scene, WebGLRenderer, BoxGeometry, MeshStandardMaterial, Color, MeshBasicMaterial, RingGeometry, sRGBEncoding } from 'three';
+import { 
+  Mesh, 
+  HemisphereLight, 
+  PerspectiveCamera, 
+  Scene, 
+  WebGLRenderer, 
+  BoxGeometry, 
+  MeshStandardMaterial, 
+  MeshBasicMaterial, 
+  RingGeometry, 
+  sRGBEncoding } from 'three';
 import { ARButton } from 'three/examples/jsm/webxr/ARButton';
-
-const objectUnselectedColor = new Color(0x5853e6);
-const objectSelectedColor = new Color(0xf0520a);
 
 class App {
   constructor() {
@@ -28,7 +35,7 @@ class App {
 
   initXR() {
     this.renderer.xr.enabled = true;
-    document.body.appendChild(ARButton.createButton(this.renderer, {sessionInit: {requiredFeatures: ['hit-test']}}));
+    document.body.appendChild(ARButton.createButton(this.renderer, { requiredFeatures: ['hit-test'] }));
 
     this.hitTestSourceRequested = false;
     this.hitTestSource = null;
@@ -39,7 +46,7 @@ class App {
 
   initScene() {
     let geometry = new RingGeometry(0.08, 0.10, 32).rotateX(-Math.PI / 2);
-    let material = new MeshBasicMaterial;
+    let material = new MeshBasicMaterial();
     this.reticle = new Mesh(geometry, material);
     this.reticle.matrixAutoUpdate = false;
     this.reticle.visible = false;

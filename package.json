@@ -1,12 +1,12 @@
 {
-  "name": "web-vr",
+  "name": "web-ar-three-js",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel src/index.html"
+    "start": "npx parcel src/index.html"
   },
-  "author": "",
+  "author": "Mark Horgan",
   "license": "ISC",
   "dependencies": {
     "three": "^0.135.0"
